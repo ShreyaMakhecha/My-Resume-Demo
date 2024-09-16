@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="name">Your Name</h1>
+        <h2 id="title">Your Job Title</h2>
+        
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'About')">About Me</button>
+            <button class="tablink" onclick="openTab(event, 'Journey')">My Journey</button>
+            <button class="tablink" onclick="openTab(event, 'Achievements')">Achievements</button>
+            <button class="tablink" onclick="openTab(event, 'Goals')">Goals</button>
+            <button class="tablink" onclick="openTab(event, 'Contact')">Contact Information</button>
+        </div>
+
+        <div id="About" class="tabcontent">
+            <h3>About Me</h3>
+            <p id="about">A brief description about yourself.</p>
+            <button onclick="editSection('about', 'Edit your about me section:')">Edit</button>
+        </div>
+
+        <div id="Journey" class="tabcontent">
+            <h3>My Journey</h3>
+            <p id="journey">Details about your professional journey.</p>
+            <button onclick="editSection('journey', 'Edit your journey section:')">Edit</button>
+        </div>
+
+        <div id="Achievements" class="tabcontent">
+            <h3>Achievements</h3>
+            <ul id="achievements">
+                <li>Achievement 1</li>
+                <li>Achievement 2</li>
+            </ul>
+            <button onclick="editList('achievements', 'Edit your achievements (comma separated):')">Edit</button>
+        </div>
+
+        <div id="Goals" class="tabcontent">
+            <h3>Goals</h3>
+            <p id="goals">Your professional goals.</p>
+            <button onclick="editSection('goals', 'Edit your goals section:')">Edit</button>
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <h3>Contact Information</h3>
+            <p id="contact">Email: your.email@example.com</p>
+            <p id="phone">Phone: (123) 456-7890</p>
+            <button onclick="editContact()">Edit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
